@@ -1,0 +1,46 @@
+.container {
+  background-image: url("../assets/fundo.png");
+  height: 100dvh;
+}
+
+.title {
+  color: white;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+}
+.calendarContainer {
+  width: 1000px;
+  height: 500px;
+  background: #111111;
+  border: 1px solid var(--color-card);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+.daysCard {
+  display: flex;
+  margin-left: 8%;
+}
+.hoursCard {
+  margin-left: 8%;
+}
+
+.hoursCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.hoursCard button {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.btnSkip {
+  margin-top: 30px;
+}
