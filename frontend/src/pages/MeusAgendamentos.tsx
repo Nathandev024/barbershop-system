@@ -3,6 +3,7 @@ import {
   deleteAgendamento,
   getMyAgendamentos,
 } from "../services/agendamento.service";
+import styles from "./MeusAgendamentos.module.css";
 
 type Agendamento = {
   id: string;
@@ -30,26 +31,31 @@ export default function MeusAgendamentos() {
   }, []);
 
   return (
-    <div>
+    <div className={styles.container}>
       {myAgendamentos.map((agendamento) => (
-        <div key={agendamento.id}>
-          {new Date(agendamento.selectedDate).toLocaleDateString("pt-BR")}
-          {agendamento.selectedTime}
-          {agendamento.status}
-          {agendamento.totalValue}
-          {agendamento.agendamentoServico.map((item) => (
-            <span key={item.serviceId}>{item.servico.title}</span>
-          ))}
-          <button
-            onClick={async () => {
-              await deleteAgendamento(agendamento.id);
-              setMyAgendamentos(
-                myAgendamentos.filter((a) => a.id !== agendamento.id),
-              );
-            }}
-          >
-            Cancelar
-          </button>
+        <div className={styles.myAgendamentosContainer}>
+          <div className={styles.myAgendamentoCard}>
+            <h1>Meus Agendamentos</h1>
+            <div key={agendamento.id}>
+              {new Date(agendamento.selectedDate).toLocaleDateString("pt-BR")}
+              {agendamento.selectedTime}
+              {agendamento.status}
+              {agendamento.totalValue}
+              {agendamento.agendamentoServico.map((item) => (
+                <span key={item.serviceId}>{item.servico.title}</span>
+              ))}
+              <button
+                onClick={async () => {
+                  await deleteAgendamento(agendamento.id);
+                  setMyAgendamentos(
+                    myAgendamentos.filter((a) => a.id !== agendamento.id),
+                  );
+                }}
+              >
+                Cancelar
+              </button>
+            </div>
+          </div>
         </div>
       ))}
     </div>
