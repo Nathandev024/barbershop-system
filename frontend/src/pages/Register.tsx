@@ -29,7 +29,14 @@ export default function Register() {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = await register({ name, telephone, email, password });
+
+    await register({
+      name,
+      telephone,
+      email,
+      password,
+    });
+
     navigate("/login");
   };
   return (

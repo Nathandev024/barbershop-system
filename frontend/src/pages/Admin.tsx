@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import {
   getAllAgendamentos,
-  deleteAgendamento,
   updateAgendamentos,
   deleteAgendamentoAdmin,
 } from "../services/agendamento.service";
