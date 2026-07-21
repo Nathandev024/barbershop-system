@@ -1,6 +1,9 @@
 .container {
   background-image: url("../assets/fundo.png");
-  height: 100dvh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .title {
