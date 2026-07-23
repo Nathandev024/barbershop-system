@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Unidades from "./pages/Unidades";
 import MeuPerfil from "./pages/MeuPerfil";
 import { AppLayout } from "./layouts/AppLayout";
+import AdminAgendamentos from "./pages/AdminAgendamentos";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
       <Route element={<AdminRoute />}>
         <Route element={<AppLayout />}>
           <Route path="/admin" element={<Admin />} />
+          <Route path="/admin-agendamentos" element={<AdminAgendamentos />} />
         </Route>
       </Route>
     </Routes>
