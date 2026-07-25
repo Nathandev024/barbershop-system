@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
@@ -15,6 +15,8 @@ import AdminAgendamentos from "./pages/AdminAgendamentos";
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/home" replace />} />
+
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route element={<AppLayout />}>
