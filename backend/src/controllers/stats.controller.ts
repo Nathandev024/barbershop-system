@@ -1,5 +1,5 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { getStats } from "../services/stats.service";
+import { getStats } from "../services/stats.service.js";
 
 export async function statsController(
   request: FastifyRequest,

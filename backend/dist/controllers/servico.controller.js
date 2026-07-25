@@ -1,4 +1,4 @@
-import { createServico, getServicos, editServicos, deleteServicos, } from "../services/servico.service";
+import { createServico, getServicos, editServicos, deleteServicos, } from "../services/servico.service.js";
 export async function createServicoController(request, reply) {
     try {
         const { title, description, value } = request.body;

@@ -1,4 +1,4 @@
-import { getMyAgendamentos, getAllAgendamentos, updateAgendamento, deleteAgendamento, createAgendamento, horarioAgendamento, deleteAgendamentoAdmin, } from "../services/agendamento.service";
+import { getMyAgendamentos, getAllAgendamentos, updateAgendamento, deleteAgendamento, createAgendamento, horarioAgendamento, deleteAgendamentoAdmin, } from "../services/agendamento.service.js";
 export async function createAgendamentoController(request, reply) {
     try {
         const { selectedDate, selectedTime, serviceId } = request.body;

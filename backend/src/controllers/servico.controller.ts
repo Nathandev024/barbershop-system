@@ -4,7 +4,7 @@ import {
   getServicos,
   editServicos,
   deleteServicos,
-} from "../services/servico.service";
+} from "../services/servico.service.js";
 export async function createServicoController(
   request: FastifyRequest<{
     Body: { title: string; description: string; value: number };

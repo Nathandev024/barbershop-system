@@ -1,4 +1,4 @@
-import { prisma } from "../database/client";
+import { prisma } from "../database/client.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 

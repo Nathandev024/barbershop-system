@@ -3,12 +3,12 @@ import {
   createServicoController,
   deleteServicoController,
   updateServicoController,
-} from "../controllers/servico.controller";
+} from "../controllers/servico.controller.js";
 import { FastifyInstance } from "fastify";
 import {
   authMiddleware,
   adminMiddleware,
-} from "../middlewares/auth.middleware";
+} from "../middlewares/auth.middleware.js";
 
 type CreateServicoBody = {
   title: string;

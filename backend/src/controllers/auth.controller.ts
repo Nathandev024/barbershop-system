@@ -1,4 +1,4 @@
-import { loginUser, registerUser } from "../services/auth.service";
+import { loginUser, registerUser } from "../services/auth.service.js";
 import { FastifyRequest, FastifyReply } from "fastify";
 export async function registerUserController(
   request: FastifyRequest<{

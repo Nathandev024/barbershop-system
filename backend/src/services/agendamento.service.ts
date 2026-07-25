@@ -1,5 +1,5 @@
 import { Status } from "@prisma/client";
-import { prisma } from "../database/client";
+import { prisma } from "../database/client.js";
 
 export async function createAgendamento(
   userId: string,

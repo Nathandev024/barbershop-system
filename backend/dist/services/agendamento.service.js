@@ -1,4 +1,4 @@
-import { prisma } from "../database/client";
+import { prisma } from "../database/client.js";
 export async function createAgendamento(userId, selectedDate, selectedTime, serviceId) {
     const findIds = await prisma.servico.findMany({
         where: {

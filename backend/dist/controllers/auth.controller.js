@@ -1,4 +1,4 @@
-import { loginUser, registerUser } from "../services/auth.service";
+import { loginUser, registerUser } from "../services/auth.service.js";
 export async function registerUserController(request, reply) {
     try {
         const { name, telephone, email, password } = request.body;

@@ -1,4 +1,4 @@
-import { prisma } from "../database/client";
+import { prisma } from "../database/client.js";
 export async function createServico(title, description, value) {
     const newServico = await prisma.servico.create({
         data: {

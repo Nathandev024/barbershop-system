@@ -1,5 +1,5 @@
-import { getServicoController, createServicoController, deleteServicoController, updateServicoController, } from "../controllers/servico.controller";
-import { authMiddleware, adminMiddleware, } from "../middlewares/auth.middleware";
+import { getServicoController, createServicoController, deleteServicoController, updateServicoController, } from "../controllers/servico.controller.js";
+import { authMiddleware, adminMiddleware, } from "../middlewares/auth.middleware.js";
 export async function servicoRoutes(fastify) {
     fastify.post("/", {
         preHandler: [authMiddleware, adminMiddleware],

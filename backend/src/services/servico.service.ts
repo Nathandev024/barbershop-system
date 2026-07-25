@@ -1,4 +1,4 @@
-import { prisma } from "../database/client";
+import { prisma } from "../database/client.js";
 export async function createServico(
   title: string,
   description: string,

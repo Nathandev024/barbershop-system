@@ -1,10 +1,10 @@
 import fastifyCors from "@fastify/cors";
 import fastify from "fastify";
-import { authRoutes } from "./routes/auth.routes";
-import { servicoRoutes } from "./routes/servico.routes";
+import { authRoutes } from "./routes/auth.routes.js";
+import { servicoRoutes } from "./routes/servico.routes.js";
 import fastifyJwt from "@fastify/jwt";
-import { agendamentoRoutes } from "./routes/agendamento.routes";
-import { statsRoutes } from "./routes/stats.routes";
+import { agendamentoRoutes } from "./routes/agendamento.routes.js";
+import { statsRoutes } from "./routes/stats.routes.js";
 export const app = fastify();
 
 app.register(fastifyCors, {

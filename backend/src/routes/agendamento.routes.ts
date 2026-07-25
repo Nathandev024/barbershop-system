@@ -7,12 +7,12 @@ import {
   deleteAgendamentoController,
   horariosAgendamento,
   deleteAgendamentoAdminController,
-} from "../controllers/agendamento.controller";
+} from "../controllers/agendamento.controller.js";
 
 import {
   authMiddleware,
   adminMiddleware,
-} from "../middlewares/auth.middleware";
+} from "../middlewares/auth.middleware.js";
 
 import { FastifyInstance } from "fastify";
 

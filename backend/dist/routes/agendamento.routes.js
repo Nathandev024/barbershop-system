@@ -1,5 +1,5 @@
-import { createAgendamentoController, getMyAgendamentosController, getAllAgendamentosController, updateAgendamentoController, deleteAgendamentoController, horariosAgendamento, deleteAgendamentoAdminController, } from "../controllers/agendamento.controller";
-import { authMiddleware, adminMiddleware, } from "../middlewares/auth.middleware";
+import { createAgendamentoController, getMyAgendamentosController, getAllAgendamentosController, updateAgendamentoController, deleteAgendamentoController, horariosAgendamento, deleteAgendamentoAdminController, } from "../controllers/agendamento.controller.js";
+import { authMiddleware, adminMiddleware, } from "../middlewares/auth.middleware.js";
 export async function agendamentoRoutes(fastify) {
     fastify.post("/", {
         preHandler: [authMiddleware],

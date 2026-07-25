@@ -7,7 +7,7 @@ import {
   createAgendamento,
   horarioAgendamento,
   deleteAgendamentoAdmin,
-} from "../services/agendamento.service";
+} from "../services/agendamento.service.js";
 import { FastifyRequest, FastifyReply } from "fastify";
 
 export async function createAgendamentoController(
