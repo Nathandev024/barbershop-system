@@ -13,7 +13,6 @@ import {
   PieChart,
   Pie,
   Cell,
-  Legend,
 } from "recharts";
 
 const COLORS = ["#c9a84c", "#6f6f6f", "#b89545", "#8b6f33"];
