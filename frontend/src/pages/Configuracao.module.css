@@ -1,0 +1,57 @@
+.container {
+  background-image: url("../assets/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.container h1 {
+  color: white;
+  padding: 60px;
+}
+
+.configCard {
+  display: flex;
+  justify-content: center;
+  margin-top: 6%;
+}
+
+.conteudoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 700px;
+  height: 300px;
+  border: 1px solid var(--color-card);
+  border-radius: 5px;
+  background: var(--color-bg);
+}
+
+.conteudoCard h3 {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.linksContainer {
+  border-bottom: 1px solid var(--color-card);
+  padding-left: 30px;
+  padding-bottom: 15px;
+  margin-top: 20px;
+}
+
+.linksContainer h2 {
+  color: var(--color-gold);
+  font-size: 18px;
+}
+
+.linksContainer p {
+  color: gray;
+  font-size: 14px;
+}
+
+.linksContainer a {
+  text-decoration: none;
+}

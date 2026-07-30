@@ -7,10 +7,11 @@ import Agendamento from "./pages/Agendamento";
 import MeusAgendamentos from "./pages/MeusAgendamentos";
 import AdminRoute from "./components/AdminRoute";
 import PrivateRoute from "./components/PrivateRoute";
-import Unidades from "./pages/Unidades";
-import MeuPerfil from "./pages/MeuPerfil";
+import Configuracao from "./pages/Configuracao";
 import { AppLayout } from "./layouts/AppLayout";
 import AdminAgendamentos from "./pages/AdminAgendamentos";
+import { EditarPerfil } from "./pages/editar-perfil";
+import { AlterarSenha } from "./pages/alterar-senha";
 
 export default function App() {
   return (
@@ -26,8 +27,9 @@ export default function App() {
         <Route element={<AppLayout />}>
           <Route path="/agendamento" element={<Agendamento />} />
           <Route path="/meus-agendamentos" element={<MeusAgendamentos />} />
-          <Route path="/meu-perfil" element={<MeuPerfil />} />
-          <Route path="/unidades" element={<Unidades />} />
+          <Route path="/configuracao" element={<Configuracao />} />
+          <Route path="/editar-perfil" element={<EditarPerfil />} />
+          <Route path="/alterar-senha" element={<AlterarSenha />} />
         </Route>
       </Route>
       <Route element={<AdminRoute />}>

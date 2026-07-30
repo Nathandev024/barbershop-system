@@ -25,11 +25,8 @@ export function Sidebar() {
       <NavLink to={"/meus-agendamentos"} className={styles.link}>
         <img src={calendario} alt="" /> AGENDAMENTOS
       </NavLink>
-      <NavLink to={"/meu-perfil"} className={styles.link}>
-        <img src={profile} alt="" /> MEU PERFIL
-      </NavLink>
-      <NavLink to={"/unidades"} className={styles.link}>
-        <img src={location} alt="" /> UNIDADES
+      <NavLink to={"/configuracao"} className={styles.link}>
+        <img src={profile} alt="" /> CONFIGURAÇÃO
       </NavLink>
       {user?.role === "ADMIN" && (
         <NavLink to={"/admin"} className={styles.link}>

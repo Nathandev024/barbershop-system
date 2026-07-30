@@ -1,10 +1,10 @@
-import { updateUser } from "../services/user.service";
 import { useState } from "react";
+import { updateUser } from "../services/user.service";
+import { Link } from "react-router-dom";
 
-export default function MeuPerfil() {
+export function EditarPerfil() {
   const [name, setName] = useState("");
   const [telephone, setTelephone] = useState("");
-  const [password, setPassword] = useState("");
   const [currentPassword, setCurrentPassword] = useState("");
   const [message, setMessage] = useState("");
 
@@ -17,10 +17,6 @@ export default function MeuPerfil() {
     event: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setTelephone(event.target.value);
-  };
-
-  const handleChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(event.target.value);
   };
 
   const handleChangeCurrentPassword = (
@@ -36,7 +32,6 @@ export default function MeuPerfil() {
         currentPassword,
         name: name || undefined,
         telephone: telephone || undefined,
-        password: password || undefined,
       });
       setMessage("Perfil atualizado com sucesso!");
     } catch (error) {
@@ -61,20 +56,13 @@ export default function MeuPerfil() {
             placeholder="novo telefone"
             onChange={handleChangeTelephone}
           />
-
-          <h6>Senha</h6>
+          <h6>Digite sua senha atual</h6>
           <input
             type="password"
             placeholder="sua senha"
             onChange={handleChangeCurrentPassword}
           />
-          <h6>Nova senha</h6>
-          <input
-            type="password"
-            placeholder="nova senha"
-            onChange={handleChangePassword}
-          />
-
+          <Link to={"/configuracao"}>Voltar</Link>
           <button>Confirmar</button>
         </form>
         {message && <p>{message}</p>}
